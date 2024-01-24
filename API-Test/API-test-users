@@ -1,0 +1,6 @@
+# These are all test users in a test environment
+
+GerritAPI	Active	Guest (read access)	API token	 FdgQrWY7K1AmQjZL1+Kw7Q==
+GerritAPIAdmin	Active	Administrator	API token	 mJm6Xf2E+6/X6rKZjVBy0w==
+GerritAPIDevice	Active	Device manager	API token	 RKJaGBSa96BqgJlLHTQ3Dg==
+GerritAPITransponder	Active	Transponder manager	API token	 mm/bRecaPGL/jgqzIpUH8Q==
