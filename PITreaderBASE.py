@@ -1,6 +1,6 @@
 ''' PIT Reader base'''
 
-             
+from PITreaderPermissionXref import *
 
 AccessKey = { "Ordernr" : "402260" ,
               "SerialNR" : "000503314" ,

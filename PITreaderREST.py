@@ -56,22 +56,22 @@ class PITreaderREST(PITreaderBase):
                 return True
         return False
 
-    def Get(self,EndPoint):
-        print (f"GET https://{self.IP}/{EndPoint}")
+    def RequestEndPoint(self , cmd = 'api/status'):
+        self.EndPoint = cmd
+
+    def ParseMethodResponse(self):
+        print(f"Response {self.ResponseCode}")
+        print(json.dumps(self.ResponseBody , indent=5))
+        
     
-        return  f"https://{self.IP}/{EndPoint}"
-    
-    def Post(self,EndPoint):
-        return  f"POST https://{self.IP}:443/{EndPoint}"
-    
-    def Fetch(self, cmd = 'api/status'):
+    def ExecuteMethod(self):
 
         buffer = BytesIO()
         c = pycurl.Curl()
-        c.setopt(c.VERBOSE, True)
+        #c.setopt(c.VERBOSE, True)
         
         #c.setopt(c.URL, 'https://duckduckgo.com/')
-        c.setopt(c.URL, self.Get( cmd ))
+        c.setopt(c.URL, f"https://{self.IP}/{self.EndPoint}")
         
         if self.AuthUser['t'] != '':
             print ("--Auth User Found : set Headers")
@@ -84,13 +84,18 @@ class PITreaderREST(PITreaderBase):
         c.setopt(c.WRITEDATA, buffer)
         c.setopt(c.CAINFO, certifi.where())
         c.perform()
+    
+        self.ResponseCode = c.getinfo(c.RESPONSE_CODE)
+        
         c.close()
 
-        body = buffer.getvalue()
-        # Body is a byte string.
-        # We have to know the encoding in order to print it to a text file
-        # such as standard output.
-        print(body.decode('iso-8859-1'))    
     
+
+        #print( buffer.getvalue())
+        # from string to python dict
+        self.ResponseBody = json.loads(buffer.getvalue().decode('iso-8859-1'))
+        
+        #from python dict to json
+        #print(json.dumps(jsondict, indent=5))
     
     

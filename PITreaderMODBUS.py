@@ -4,12 +4,13 @@ PIT Reader MODBUS
 ============================================================================================
 '''
     
+from PITreaderBASE import *
 import modbus.client as mbc
 #import struct as s
 import datetime as dt
     
     
-class PITReaderMODBUS(PITReaderBase):
+class PITReaderMODBUS(PITreaderBase):
     ''' PIT Reader with MODBUS'''
 
     

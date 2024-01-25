@@ -1,6 +1,6 @@
 ''' PIT Reader met MODBUS  & REST API'''
 from PITreaderREST import *
-
+from PITreaderMODBUS import *
 
 
 def main():
@@ -8,8 +8,9 @@ def main():
     PIT2 = PITreaderREST()
     PIT2.SetUserToken("GerritAPIAdmin")
     #PIT2.Fetch('api/config/blocklist')
-    PIT2.Fetch('api/config/permissionList')
-    
+    PIT2.RequestEndPoint('api/config/permissionList')
+    PIT2.ExecuteMethod()
+    PIT2.ParseMethodResponse()
     return
     
     PIT1 = PITReaderMODBUS()
