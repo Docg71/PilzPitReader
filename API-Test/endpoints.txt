@@ -1,0 +1,128 @@
+
+public const string Status = "/api/status";
+public const string StatusAuthentication = "/api/status/authentication";
+
+        /// <summary>
+        /// Status monitoring endpoint
+        /// </summary>
+        public const string StatusMonitor = "/api/status/monitor";
+
+        /// <summary>
+        /// Configuration endpoint.
+        /// </summary>
+        public const string Config = "/api/config";
+
+        /// <summary>
+        /// Blocklist endpoint.
+        /// </summary>
+        public const string ConfigBlocklist = "/api/config/blocklist";
+
+        /// <summary>
+        /// Regenerate certificate endpoint.
+        /// </summary>
+        public const string FilesCertificate = "/api/files/certificate";
+
+        /// <summary>
+        /// Regenerate certificate endpoint.
+        /// </summary>
+        public const string ConfigCertificateRegenerate = "/api/config/certificate/regenerate";
+
+        /// <summary>
+        /// Coding endpoint.
+        /// </summary>
+        public const string ConfigCoding = "/api/config/coding";
+
+        /// <summary>
+        /// OEM Coding endpoint.
+        /// </summary>
+        public const string ConfigCodingOem = "/api/config/coding/oem";
+
+        /// <summary>
+        /// Permission list endpoint.
+        /// </summary>
+        public const string ConfigPermissionList = "/api/config/permissionList";
+
+        /// <summary>
+        /// User data configuration endpoint.
+        /// </summary>
+        public const string ConfigUserData = "/api/config/userData";
+
+        /// <summary>
+        /// User data configuration reset endpoint.
+        /// </summary>
+        public const string ConfigUserDataReset = "/api/config/userData/reset";
+
+        /// <summary>
+        /// User data configuration parameter endpoint.
+        /// </summary>
+        public const string ConfigUserDataParameter = "/api/config/userData/parameter";
+
+        /// <summary>
+        /// User data configuration version endpoint.
+        /// </summary>
+        public const string ConfigUserDataVersion = "/api/config/userData/version";
+
+        /// <summary>
+        /// Led endpoint.
+        /// </summary>
+        public const string Led = "/api/led";
+
+        /// <summary>
+        /// Transponder data endpoint.
+        /// </summary>
+        public const string Transponder = "/api/transponder";
+
+        /// <summary>
+        /// Transponder user data endpoint.
+        /// </summary>
+        public const string TransponderUserData = "/api/transponder/userData";
+
+        /// <summary>
+        /// Transponder user data clear endpoint.
+        /// </summary>
+        public const string TransponderUserDataClear = "/api/transponder/userData/clear";
+
+        /// <summary>
+        /// Transponder user data read endpoint.
+        /// </summary>
+        public const string TransponderUserDataRead = "/api/transponder/userData/read";
+
+        /// <summary>
+        /// Transponder user data write endpoint.
+        /// </summary>
+        public const string TransponderUserDataWrite = "/api/transponder/userData/write";
+
+        /// <summary>
+        /// Transponder user data clear group data endpoint.
+        /// </summary>
+        public const string TransponderUserDataClearGroup = "/api/transponder/userData/clearGroup";
+
+        /// <summary>
+        /// Transponder user data add group values endpoint.
+        /// </summary>
+        public const string TransponderUserDataAddGroupValues = "/api/transponder/userData/addGroupValues";
+
+        /// <summary>
+        /// Transponder teach-in endpoint.
+        /// </summary>
+        public const string TransponderTeachIn = "/api/transponder/teachIn";
+
+        /// <summary>
+        /// Firmware upload endpoint.
+        /// </summary>
+        public const string FilesFirmware = "/api/files/firmware";
+
+        /// <summary>
+        /// Firmware update endpoint.
+        /// </summary>
+        public const string FirmwareUpdate = "/api/firmware/update";
+
+        /// <summary>
+        /// OPC UA server certificate endpoint.
+        /// </summary>
+        public const string FilesOpcuaServer = "/api/files/opcua/server";
+
+        /// <summary>
+        /// Configuration backup endpoint.
+        /// </summary>
+        public const string FilesBackup = "/api/files/backup";
